@@ -1,16 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { TranslatePipe, TranslateService } from './translate';
+import { LanguagesService } from './translate/languages';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ TranslateService, LanguagesService ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
